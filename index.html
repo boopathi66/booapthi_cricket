@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CricScout: scouting notes on international players</title>
+  <meta name="description" content="Career records and scouting notes on international cricketers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="wordmark" href="#">CricScout</a>
+      <div id="userArea" class="user-area hidden">
+        <span id="userName"></span>
+        <button id="signOutBtn" class="link-btn light" type="button">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Sign in / create account (only used when login is switched on in config.js) -->
+    <section id="authView" class="auth hidden">
+      <h1 id="authTitle">Sign in</h1>
+      <p id="authIntro" class="lead">Use your email and password to see the player notes.</p>
+
+      <p id="authMsg" class="msg hidden" role="alert"></p>
+
+      <form id="authForm" novalidate>
+        <div id="nameRow" class="field hidden">
+          <label for="nameInput">Your name</label>
+          <input id="nameInput" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="emailInput">Email</label>
+          <input id="emailInput" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="passwordInput">Password</label>
+          <input id="passwordInput" type="password" autocomplete="current-password" minlength="8" required>
+          <span id="passwordHint" class="hint hidden">At least 8 characters.</span>
+        </div>
+        <button id="authSubmit" class="btn" type="submit">Sign in</button>
+      </form>
+
+      <p class="switch">
+        <span id="switchText">New here?</span>
+        <button id="switchBtn" class="link-btn" type="button">Create an account</button>
+      </p>
+    </section>
+
+    <!-- Player list -->
+    <section id="listView" class="hidden">
+      <h1>Players</h1>
+      <p class="lead">Career records and scouting notes. Pick a player to open their page.</p>
+
+      <div class="filters">
+        <div class="field">
+          <label for="searchInput">Search by name</label>
+          <input id="searchInput" type="search" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="countryFilter">Country</label>
+          <select id="countryFilter"><option value="ALL">All countries</option></select>
+        </div>
+        <div class="field">
+          <label for="roleFilter">Role</label>
+          <select id="roleFilter">
+            <option value="ALL">All roles</option>
+            <option value="Batter">Batters</option>
+            <option value="Bowler">Bowlers</option>
+            <option value="All-Rounder">All-rounders</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="resultCount" class="count" aria-live="polite"></p>
+
+      <table class="roster">
+        <thead>
+          <tr><th scope="col">Player</th><th scope="col">Country</th><th scope="col">Role</th><th scope="col" class="col-bat">Batting</th></tr>
+        </thead>
+        <tbody id="rosterBody"></tbody>
+      </table>
+
+      <p id="emptyMsg" class="empty hidden">
+        No players match those filters.
+        <button id="clearFilters" class="link-btn" type="button">Clear filters</button>
+      </p>
+      <p id="loadMsg" class="empty hidden"></p>
+    </section>
+
+    <!-- One player -->
+    <article id="playerView" class="player hidden">
+      <a class="back" href="#">Back to all players</a>
+
+      <h1 id="pName"></h1>
+      <p id="pMeta" class="lead"></p>
+      <p><a id="pLink" class="ext" target="_blank" rel="noopener noreferrer">Full profile on ESPNcricinfo (opens in a new tab)</a></p>
+
+      <h2>Career record</h2>
+      <table class="record">
+        <thead id="recordHead"></thead>
+        <tbody id="recordBody"></tbody>
+      </table>
+
+      <div class="notes">
+        <section class="note good">
+          <h2>Strengths</h2>
+          <ul id="strengthList"></ul>
+        </section>
+        <section class="note bad">
+          <h2>Weaknesses</h2>
+          <ul id="weaknessList"></ul>
+        </section>
+      </div>
+
+      <h2 id="chartTitle">Scoring by phase of the innings</h2>
+      <div id="chartBox" class="chart-box"><canvas id="phaseChart" aria-label="Bar chart by phase of the innings" role="img"></canvas></div>
+      <p id="chartEmpty" class="empty hidden">Phase figures haven't been added for this player yet.</p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      Figures are entered by hand and can be out of date. For official numbers, check ESPNcricinfo.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

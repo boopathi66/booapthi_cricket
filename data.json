@@ -1,0 +1,212 @@
+[
+  {
+    "id": "virat-kohli",
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Top-Order Batter",
+    "category": "Batter",
+    "battingStyle": "Right-hand bat",
+    "cricinfoUrl": "https://www.espncricinfo.com/cricketers/virat-kohli-253802",
+    "career": {
+      "t20i": {
+        "matches": 125,
+        "runs": 4188,
+        "average": 48.7,
+        "strikeRate": 137.0
+      },
+      "odi": {
+        "matches": 295,
+        "runs": 13906,
+        "average": 58.2,
+        "strikeRate": 93.5
+      },
+      "test": {
+        "matches": 113,
+        "runs": 8848,
+        "average": 49.1,
+        "strikeRate": 55.6
+      }
+    },
+    "advantages": [
+      "Master of pacing run chases with an average of 67+ when batting second",
+      "High scoring acceleration against pace bowling in middle overs (7–15)",
+      "High boundary-to-dot conversion rate and running speed"
+    ],
+    "disadvantages": [
+      "Vulnerable to 5th-stump line deliveries swinging away outside off early on",
+      "Noticeable dip in strike rate against high-wrist leg-spinners in middle overs"
+    ],
+    "phaseStrikeRates": {
+      "powerplay": 118,
+      "middle": 136,
+      "death": 204
+    }
+  },
+  {
+    "id": "rohit-sharma",
+    "name": "Rohit Sharma",
+    "country": "India",
+    "role": "Opening Batter",
+    "category": "Batter",
+    "battingStyle": "Right-hand bat",
+    "cricinfoUrl": "https://www.espncricinfo.com/cricketers/rohit-sharma-34102",
+    "career": {
+      "t20i": {
+        "matches": 159,
+        "runs": 4231,
+        "average": 32.0,
+        "strikeRate": 140.9
+      },
+      "odi": {
+        "matches": 265,
+        "runs": 10866,
+        "average": 49.2,
+        "strikeRate": 92.4
+      },
+      "test": {
+        "matches": 61,
+        "runs": 4179,
+        "average": 44.0,
+        "strikeRate": 56.4
+      }
+    },
+    "advantages": [
+      "Elite pull and hook shot execution against express short-pitch deliveries",
+      "Maximum boundary clearance rate inside the mandatory Powerplay (overs 1–6)",
+      "Exponential acceleration profile once past the 30-run mark"
+    ],
+    "disadvantages": [
+      "Susceptible to early incoming seam movement from left-arm fast bowlers",
+      "Stump-to-stump nip-backers on cold surfaces create LBW vulnerability"
+    ],
+    "phaseStrikeRates": {
+      "powerplay": 152,
+      "middle": 138,
+      "death": 195
+    }
+  },
+  {
+    "id": "jasprit-bumrah",
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "role": "Fast Bowler",
+    "category": "Bowler",
+    "battingStyle": "Right-hand bat",
+    "cricinfoUrl": "https://www.espncricinfo.com/cricketers/jasprit-bumrah-625383",
+    "career": {
+      "t20i": {
+        "matches": 70,
+        "wickets": 89,
+        "economy": 6.27,
+        "average": 17.7
+      },
+      "odi": {
+        "matches": 89,
+        "wickets": 149,
+        "economy": 4.59,
+        "average": 23.5
+      },
+      "test": {
+        "matches": 36,
+        "wickets": 159,
+        "economy": 2.74,
+        "average": 20.7
+      }
+    },
+    "advantages": [
+      "Hyperextension release gives batsmen reduced reaction time",
+      "Pinpoint yorker accuracy and disguised slower deliveries at the death",
+      "Sub-6.5 economy rate under high-pressure phases"
+    ],
+    "disadvantages": [
+      "Workload constraints require rotation throughout tournaments",
+      "Lower tail-end batting resilience when chasing target totals"
+    ]
+  },
+  {
+    "id": "travis-head",
+    "name": "Travis Head",
+    "country": "Australia",
+    "role": "Opening Batter",
+    "category": "Batter",
+    "battingStyle": "Left-hand bat",
+    "cricinfoUrl": "https://www.espncricinfo.com/cricketers/travis-head-530011",
+    "career": {
+      "t20i": {
+        "matches": 38,
+        "runs": 1090,
+        "average": 34.1,
+        "strikeRate": 158.4
+      },
+      "odi": {
+        "matches": 69,
+        "runs": 2645,
+        "average": 43.4,
+        "strikeRate": 105.1
+      },
+      "test": {
+        "matches": 49,
+        "runs": 3173,
+        "average": 41.8,
+        "strikeRate": 63.8
+      }
+    },
+    "advantages": [
+      "High Powerplay strike rate (170+) targeting short deliveries",
+      "Strong boundary percentage through off-side against express pace",
+      "Changes match win probabilities inside the first 6 overs"
+    ],
+    "disadvantages": [
+      "Susceptible to tight off-spin targeting stumps on slow turners",
+      "High-risk intent results in early dismissals against swing"
+    ],
+    "phaseStrikeRates": {
+      "powerplay": 174,
+      "middle": 142,
+      "death": 165
+    }
+  },
+  {
+    "id": "rashid-khan",
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Leg-Spinner / Finisher",
+    "category": "All-Rounder",
+    "battingStyle": "Right-hand bat",
+    "cricinfoUrl": "https://www.espncricinfo.com/cricketers/rashid-khan-793463",
+    "career": {
+      "t20i": {
+        "matches": 93,
+        "wickets": 152,
+        "economy": 6.08,
+        "average": 14.4
+      },
+      "odi": {
+        "matches": 105,
+        "wickets": 190,
+        "economy": 4.19,
+        "average": 20.0
+      },
+      "test": {
+        "matches": 5,
+        "wickets": 34,
+        "economy": 2.97,
+        "average": 22.4
+      }
+    },
+    "advantages": [
+      "Rapid arm action makes disguise difficult to read off the hand",
+      "Relentless stump-to-stump trajectory producing high LBW rates",
+      "Quick boundary scoring as a death-overs finisher"
+    ],
+    "disadvantages": [
+      "Vulnerable when batters use footwork to hit full deliveries",
+      "Seam grip decreases when bowling with wet dew-soaked balls"
+    ],
+    "phaseStrikeRates": {
+      "powerplay": 115,
+      "middle": 130,
+      "death": 192
+    }
+  }
+]
